@@ -1,0 +1,99 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+}
+/* espaçamento legal entre eles */
+input{
+    margin-bottom: 15px;
+}
+/* espaçamento apenas do titulo */
+h1{
+    margin-bottom: 20px;
+}
+body{
+    background-color: #CCCCCC;
+}
+/* ocultar a tela  de criar conta */
+#area-criar-conta{
+    display: none;
+}
+
+
+/* card de login */
+#area-login, #area-criar-conta{
+    background-color: #FFFFFF;
+    border-radius: 5px;
+    box-shadow: 0px 1px 4px gray; 
+    width: 350px;
+    margin: auto;
+    padding: 20px;
+    margin-top: 150px;
+}
+
+/* área de estilo dos botões login e criar */
+.grupo-btn-login-criar{
+    display: flex;
+    margin-bottom: 15px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+.btn-do-top{
+    display: inline-block;
+    width: 50%;
+    height: 40px;
+    text-align: center;
+    line-height: 40px;
+}
+.btn-ativado{
+    background: linear-gradient(to left, #07A0C3, #086788);
+    color: #FFFFFF;
+}
+.btn-desativado{
+    border: 1px solid #CCCCCC;
+}
+#btn-login{
+    border-radius: 5px 0px 0px 5px;
+    border-right: none;
+}
+#btn-criar-conta{
+    border-radius: 0px 5px 5px 0px;
+    border-left: none;
+}
+
+
+/* uma class que da atributos em comun entre todos os inputs */
+.in-padrao{
+    width: 100%;
+    border: none;
+    height: 40px;
+    border-radius: 5px;
+}
+/* alteração apenas nos inputs de texto */
+.in-tipo-texto{
+    padding-left: 30px;
+    border: 1px solid #CCCCCC;
+    border-radius: 0px;
+    /* border-image: linear-gradient(to left, #07A0C3, #086788) 1; */
+
+    /* definições que os inputs terão para add imagem dentro deles */
+    background-repeat: no-repeat; 
+    background-position: 5px; /* 3px da esquerda */
+}
+.in-tipo-texto:focus{
+    outline: none;
+}
+.in-tipo-btn{
+    background: linear-gradient(to left, #07A0C3, #086788);
+    color: #FFFFFF;
+    font-weight: bold;
+    cursor: pointer;
+}
+/* estimo de imagem dento do input de login */
+#in-id, #in-nome, #in-sobrenome{
+    background-image: url(img/Usuario.png);
+}
+#in-senha, #in-senha-criar{
+    background-image: url(img/senha.png);
+}

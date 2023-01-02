@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <!-- CSS -->
+    <link rel="stylesheet" href="style.css">
+    <!-- font do googel -->
+    <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
+    <style> @import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap'); </style>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+</head>
+<body>
+    <section id="area-login">
+        <!-- Local Do Titulo -->
+        <h1 class="Titulo">Login</h1>
+
+        <!-- Local Do Inputs -->
+        <form>
+            <!-- area btn => login ou crear conta -->
+            <div class="grupo-btn-login-criar">
+                <div class="btn-do-top btn-ativado" id="btn-login" onclick="telaCriarConta()">Login</div>
+                <div class="btn-do-top btn-desativado" id="btn-criar-conta" onclick="telaCriarConta('telaCriarConta')">Criar</div>
+            </div>
+
+            <!-- area Email -->
+            <input class="in-padrao in-tipo-texto" type="nome" name="id-Usuario" id="in-id" placeholder="Id do Usuario" required>
+
+            <!-- area Senha -->
+            <input class="in-padrao in-tipo-texto" type="password" name="senha" id="in-senha" placeholder="Senha" required>
+            
+            <!-- ÁREA DE CHACKBOX -->
+            <!-- evento onclick chama uam função e passa dois parametro, cada parametro é  nome do ID de dois elementos -->
+            <input type="checkbox" name="mostar-senha" id="checkbox-senha" onclick="mostrarSenha('checkbox-senha', 'in-senha')">
+            <label for="checkbox-senha">Mostrar Senha</label>
+            
+            <!-- area botão -->
+            <input class="in-padrao in-tipo-btn" type="button" value="Entrar" onclick="login()">
+        </form>
+
+        <!-- Área Criar Conta -->
+        <p>Esqueceu a senha? <a href="">Recuperar</a></p>
+    </section>
+
+    <section id="area-criar-conta">
+        <h1 class="Titulo">Criar Conta</h1>
+        <form>
+            <!-- area btn => login ou crear conta -->
+            <div class="grupo-btn-login-criar">
+                <div class="btn-do-top btn-desativado" id="btn-login2" onclick="telaCriarConta()">Login</div>
+                <div class="btn-do-top btn-ativado" id="btn-criar-conta2" onclick="telaCriarConta('telaLogin')">Criar</div>
+            </div>
+
+            <!-- area Nome -->
+            <label for="">Nome:</label>
+            <input class="in-padrao in-tipo-texto" type="nome" name="NomeUsuario" id="in-nome" placeholder="Seu Nome" onblur="validarNomes(nome)" required>
+
+            <!-- area Sobrenome -->
+            <label for="">Sobrenome:</label>
+            <input class="in-padrao in-tipo-texto" type="sobrenome" name="sobrenomeUsuario" id="in-sobrenome" placeholder="Seu Sobrenome" onblur="validarNomes(sobrenome)" required>
+
+            <!-- area Senha -->
+            <label for="">Senha:</label>
+            <input class="in-padrao in-tipo-texto" type="password" name="senha" id="in-senha-criar" placeholder="Crie uma Senha" onblur="validarCriarSenha()" required>
+
+            <!-- ÁREA DE CHACKBOX -->
+            <!-- evento onclick chama uam função e passa dois parametro, cada parametro é  nome do ID de dois elementos -->
+            <input type="checkbox" name="mostar-senha" id="checkbox-senha-criar-conta" onclick="mostrarSenha('checkbox-senha-criar-conta', 'in-senha-criar')">
+            <label for="checkbox-senha-criar-conta">Mostrar Senha</label>
+
+            <!-- area botão -->
+            <input class="in-padrao in-tipo-btn" type="button" value="Criar" onclick="criarConta()">
+        </form>
+        <!-- Área Login -->
+        <p>Já tem conta? <a href="">Fazer Login</a></p>
+    </section>
+
+    <script src="script.js"></script>
+</body>
+</html>
